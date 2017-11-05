@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    form(action="" method="POST" name="login")
+        section#loginForm
+            h2 Login
+            br
+            br
+            label(for="email") Email
+            input(type="email" name="" id="" required="required")
+            br
+            br
+            label(for="password") Password
+            input(type="password" name="" id="" required="required")
+            br
+            br
+            input(type="checkbox" name="" id="") 
+            br 
+            input(type="button" value="Submit")
+            br
+            br
+            p <a href="registration">Register</a> if you don't have an account
+        section#socialLoginForm
+            h3 Use another service to Login
+
+            p For Administrative Login 
+                a(href="adminLogin.html") click here.

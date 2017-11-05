@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    form(action="/resource" method="post")
+        br
+        br    
+        h2(style="text-align:center") Add New Resource
+        br
+        br
+        section
+            label(for="name") Resource Name
+            input(type="text" name="name" required="required")
+            br
+            br
+            label(for="type">Resource Type)
+            input(type="text" name="type" required="required")
+            br
+            br
+            label(for="group") Resource Group
+            select(name="grp" id="")
+                option(value="") --Select--
+                option(value="") General
+                option(value="") Senior
+                option(value="") Junior
+                option(value="") Basic
+            br
+            br
+            label(for="resource") Please Select to Attach Resource
+            input(type="file" name="selection" multiple onchange="fileProcess(this.files)")
+            div#result
+            br
+            button Submit
+        aside(style="padding-right:20%")
+            label(for="note") Note
+            textarea(name="note" id="" cols="30" rows="10" placeholder="Add Details on the Resource")

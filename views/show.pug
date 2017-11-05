@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    p(style="font-size:20px; text-align:center;") Below are a list of all Resy.urces available on the site
+
+    form(action="", method="get")
+    table(style="font-family: arial,helvetica,sans-serifs;" table-layout="auto" cellspacing="0" cellpadding="5" border="1px solid black" align="center")
+        tbody
+            tr
+                th(style="text-align : center; background-color : #3d64ff; color: #ffffff;") Resources
+                th(style="text-align : center; background-color : #3d64ff; color: #ffffff;") Resource Type
+                th(style="text-align : center; background-color : #3d64ff; color: #ffffff;") Resource Group
+                th(style="text-align : center; background-color : #3d64ff; color: #ffffff;") Template
+                th(style="text-align : center; background-color : #3d64ff; color: #ffffff;") Resource Note 
+        each res in Resy    
+            tr
+                td #{Resy.name}
+
+                td #{Resy.type}
+                
+                td #{Resy.group}
+
+                td #{Resy.selection}
+
+                td #{Resy.note}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    
+    form(action="/resource" method="delete")
+        br
+        br
+        h3 Students 
+            each res in Resy
+                div(name="delRes")
+                    br
+                    header Name: #{res.name}
+                            
+                    p Type: #{res.type}
+                            
+                    p Group: #{res.group}
+
+                    p Selection: #{res.selection}
+
+                    p Note: #{res.note}
+
+                    p Created Date: #{res.createdDate}
+                            
+                    button Delete
+                    input(type="button", value="Update")
+            

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+form(action="" method="get" id="view")
+        br
+        br
+        h3 Students 
+            each res in Resy
+                .use
+                    br
+                    header Name: #{res.name}
+                            
+                    p Type: #{res.type}
+                            
+                    p Group: #{res.group}
+
+                    p Selection: #{res.selection}
+
+                    p Note: #{res.note}
+
+                    p Created Date: #{res.createdDate}
+                            
+                    input(type="button", value="Delete")
+                    input(type="button", value="Update")
